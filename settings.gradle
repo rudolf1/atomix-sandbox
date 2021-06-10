@@ -1,0 +1,8 @@
+rootProject.name = 'queue_in_database'
+
+include(
+        "module1",
+        "module2",
+        "core",
+        "common",
+)

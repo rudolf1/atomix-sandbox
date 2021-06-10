@@ -1,0 +1,27 @@
+plugins {
+    id 'java'
+    id 'org.jetbrains.kotlin.jvm'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib"
+    implementation "io.atomix:atomix:3.1.9"
+    implementation "io.atomix:atomix-raft:3.1.9"
+    implementation 'io.atomix:atomix-log:3.1.9'
+    implementation "ch.qos.logback:logback-classic:1.2.3"
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core-jvm:1.5.0'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-jdk8:1.5.0'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+}
+
+test {
+    useJUnitPlatform()
+}

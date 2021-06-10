@@ -1,0 +1,18 @@
+<configuration>
+    <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%thread{5}] %-5level %logger{15} - %msg%n
+            </pattern>
+        </encoder>
+    </appender>
+
+    <logger name="io.atomix.protocols.backup" level="${root.logging.level:-INFO}" />
+    <logger name="io.atomix.protocols.raft" level="${root.logging.level:-INFO}" />
+    <logger name="io.atomix.protocols.log" level="${root.logging.level:-INFO}" />
+    <logger name="io.atomix.cluster.protocol" level="INFO" />
+    <logger name="io.atomix.messaging" level="INFO" />
+
+    <root level="${root.logging.level:-INFO}">
+        <appender-ref ref="STDOUT" />
+    </root>
+</configuration>
